@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kevin Misiha Das — B.Tech CS (AI) student, Full Stack Developer, Flutter Developer, and passionate technologist from Trivandrum. Explore my portfolio of projects, skills, and achievements.">
+    <meta name="keywords" content="Kevin Misiha Das, Portfolio, Full Stack Developer, Flutter Developer, Computer Science, AI, Trivandrum">
+    <meta name="author" content="Kevin Misiha Das">
+    <title>Kevin Misiha Das — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Particle Canvas -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <a href="#hero" class="nav-logo">
+            <span class="logo-bracket">&lt;</span>KMD<span class="logo-bracket"> /&gt;</span>
+        </a>
+        <div class="nav-links" id="navLinks">
+            <a href="#about" class="nav-link" data-text="About">About</a>
+            <a href="#skills" class="nav-link" data-text="Skills">Skills</a>
+            <a href="#experience" class="nav-link" data-text="Experience">Experience</a>
+            <a href="#projects" class="nav-link" data-text="Projects">Projects</a>
+            <a href="#certifications" class="nav-link" data-text="Certifications">Certifications</a>
+            <a href="#philosophy" class="nav-link" data-text="Philosophy">Philosophy</a>
+            <a href="#origin" class="nav-link" data-text="Origin">Origin</a>
+            <a href="#contact" class="nav-link" data-text="Contact">Contact</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-content">
+            <div class="hero-tag animate-in">
+                <span class="tag-dot"></span>
+                <span>Available for Opportunities</span>
+            </div>
+            <h1 class="hero-title animate-in">
+                <span class="hero-greeting">Hello, I'm</span>
+                <span class="hero-name">
+                    <span class="name-letter" data-letter="K">K</span><span class="name-letter" data-letter="e">e</span><span class="name-letter" data-letter="v">v</span><span class="name-letter" data-letter="i">i</span><span class="name-letter" data-letter="n">n</span>
+                    <span class="name-space">&nbsp;</span>
+                    <span class="name-letter" data-letter="M">M</span><span class="name-letter" data-letter="i">i</span><span class="name-letter" data-letter="s">s</span><span class="name-letter" data-letter="i">i</span><span class="name-letter" data-letter="h">h</span><span class="name-letter" data-letter="a">a</span>
+                    <span class="name-space">&nbsp;</span>
+                    <span class="name-letter" data-letter="D">D</span><span class="name-letter" data-letter="a">a</span><span class="name-letter" data-letter="s">s</span>
+                </span>
+            </h1>
+            <div class="hero-roles animate-in">
+                <span class="role-text" id="typewriter"></span>
+                <span class="role-cursor">|</span>
+            </div>
+            <p class="hero-description animate-in">
+                B.Tech Computer Science (AI) student from Trivandrum, building the future one line of code at a time.
+            </p>
+            <div class="hero-cta animate-in">
+                <a href="#projects" class="btn btn-primary">
+                    <span>View My Work</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    <span>Get In Touch</span>
+                </a>
+            </div>
+            <div class="hero-stats animate-in">
+                <div class="stat-item">
+                    <span class="stat-number" data-count="2">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Internships</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="5">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="5">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Technologies</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">01 — Who Am I</span>
+                <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-card glass-card reveal">
+                    <div class="about-avatar-wrapper">
+                        <div class="avatar-ring"></div>
+                        <div class="avatar-img-container">
+                            <img src="images/tech_workspace.png" alt="Kevin Misiha Das Workspace" class="avatar-img">
+                        </div>
+                    </div>
+                    <div class="about-info">
+                        <div class="info-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                            <span>Kevin Misiha Das</span>
+                        </div>
+                        <div class="info-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                            <span>B.Tech CS (Artificial Intelligence)</span>
+                        </div>
+                        <div class="info-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <span>Trivandrum, Kerala, India</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text-area reveal">
+                    <p class="about-text">
+                        I'm a <strong>hardworking and deterministic</strong> B.Tech student specializing in Computer Science with Artificial Intelligence. My passion lies at the intersection of technology and innovation — I'm always eager to explore uncharted territories in tech and science.
+                    </p>
+                    <p class="about-text">
+                        With hands-on experience in <strong>Flutter app development</strong> and <strong>Full Stack development</strong> through internships, I've built a solid foundation across the development spectrum. From crafting mobile experiences to engineering backend systems, I bring ideas to life with code.
+                    </p>
+                    <p class="about-text">
+                        Beyond the screen, I'm an avid <strong>badminton player</strong> who has represented in tournaments — because discipline on the court translates to discipline in code. I'm a deep thinker who believes setbacks are just compressed energy waiting to propel us forward.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-tag">
+                            <span class="highlight-icon">🚀</span> Full Stack Dev
+                        </div>
+                        <div class="highlight-tag">
+                            <span class="highlight-icon">📱</span> Flutter Dev
+                        </div>
+                        <div class="highlight-tag">
+                            <span class="highlight-icon">🤖</span> AI Enthusiast
+                        </div>
+                        <div class="highlight-tag">
+                            <span class="highlight-icon">🔐</span> Cybersecurity
+                        </div>
+                        <div class="highlight-tag">
+                            <span class="highlight-icon">🏸</span> Badminton Player
+                        </div>
+                        <div class="highlight-tag">
+                            <span class="highlight-icon">💡</span> Deep Thinker
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section section-dark" id="skills">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">02 — What I Know</span>
+                <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+            </div>
+            <div class="skills-grid">
+                <!-- Skill Card: HTML -->
+                <div class="skill-card glass-card reveal" data-tilt>
+                    <div class="skill-icon-wrap">
+                        <div class="skill-icon" style="--accent: #e44d26;">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M1.5 0h21l-1.91 21.56L11.99 24l-8.59-2.44L1.5 0zm7.09 9.65l-.17-1.94h8.15l.52-5.83H5.82l1.52 17.14 4.66 1.3 4.67-1.3.67-7.5H11.7l-.28 3.17 1.58.43 1.58-.43.17-1.87h3.35l-.52 5.74-4.59 1.26-4.59-1.26-.35-3.92h1.96l.17 1.97 2.8.78 2.81-.78.29-3.3H8.94l-.35-3.96z"/></svg>
+                        </div>
+                    </div>
+                    <h3 class="skill-name">HTML</h3>
+                    <div class="skill-level">
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="90" style="--fill-color: #e44d26;"></div>
+                        </div>
+                        <span class="skill-percent">Advanced</span>
+                    </div>
+                    <div class="skill-badge advanced">Advanced</div>
+                </div>
+
+                <!-- Skill Card: React -->
+                <div class="skill-card glass-card reveal" data-tilt>
+                    <div class="skill-icon-wrap">
+                        <div class="skill-icon" style="--accent: #61dafb;">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.31 0-.592.068-.846.197-1.416.72-1.86 3.297-1.19 6.37-2.91.876-4.767 2.182-4.767 3.507 0 1.332 1.882 2.656 4.83 3.534-.636 2.993-.175 5.524 1.212 6.228.263.134.557.197.855.197 1.36 0 3.132-.965 4.908-2.615 1.765 1.636 3.52 2.585 4.867 2.585.31 0 .595-.064.853-.197 1.423-.724 1.87-3.316 1.2-6.34 2.876-.87 4.707-2.168 4.707-3.494 0-1.325-1.856-2.656-4.768-3.534.646-2.992.182-5.522-1.204-6.233-.264-.134-.567-.197-.876-.197z"/></svg>
+                        </div>
+                    </div>
+                    <h3 class="skill-name">React</h3>
+                    <div class="skill-level">
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="65" style="--fill-color: #61dafb;"></div>
+                        </div>
+                        <span class="skill-percent">Moderate</span>
+                    </div>
+                    <div class="skill-badge moderate">Moderate</div>
+                </div>
+
+                <!-- Skill Card: Node.js -->
+                <div class="skill-card glass-card reveal" data-tilt>
+                    <div class="skill-icon-wrap">
+                        <div class="skill-icon" style="--accent: #68a063;">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M11.998 24c-.321 0-.641-.084-.922-.247l-2.936-1.737c-.438-.245-.224-.332-.08-.383.585-.203.703-.25 1.328-.604.065-.037.151-.023.218.017l2.256 1.339a.29.29 0 0 0 .272 0l8.795-5.076a.277.277 0 0 0 .134-.238V6.921a.282.282 0 0 0-.137-.242l-8.791-5.072a.278.278 0 0 0-.271 0L3.075 6.68a.284.284 0 0 0-.139.241v10.15a.27.27 0 0 0 .138.236l2.409 1.392c1.307.654 2.108-.116 2.108-.89V7.787c0-.142.114-.253.256-.253h1.115c.139 0 .255.112.255.253v10.021c0 1.745-.95 2.745-2.604 2.745-.509 0-.909 0-2.026-.551L2.28 18.675a1.852 1.852 0 0 1-.922-1.604V6.921c0-.659.353-1.275.922-1.603L11.076.242a1.904 1.904 0 0 1 1.846 0l8.794 5.076c.57.329.924.944.924 1.603v10.15a1.86 1.86 0 0 1-.924 1.604l-8.794 5.078c-.28.163-.601.247-.924.247z"/></svg>
+                        </div>
+                    </div>
+                    <h3 class="skill-name">Node.js</h3>
+                    <div class="skill-level">
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="65" style="--fill-color: #68a063;"></div>
+                        </div>
+                        <span class="skill-percent">Moderate</span>
+                    </div>
+                    <div class="skill-badge moderate">Moderate</div>
+                </div>
+
+                <!-- Skill Card: MongoDB -->
+                <div class="skill-card glass-card reveal" data-tilt>
+                    <div class="skill-icon-wrap">
+                        <div class="skill-icon" style="--accent: #4DB33D;">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M17.193 9.555c-1.264-5.58-4.252-7.414-4.573-8.115-.28-.394-.53-.954-.735-1.44-.036.495-.055.685-.523 1.184-.723.566-4.438 3.682-4.74 10.02-.282 5.912 4.27 9.435 4.888 9.884l.07.05A73.49 73.49 0 0 1 11.91 24h.165c.136-.575.283-1.12.434-1.63.164.055.313.1.393.13l.07-.05c.618-.449 5.17-3.972 4.888-9.884a14.11 14.11 0 0 0-.667-3.011z"/></svg>
+                        </div>
+                    </div>
+                    <h3 class="skill-name">MongoDB</h3>
+                    <div class="skill-level">
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="60" style="--fill-color: #4DB33D;"></div>
+                        </div>
+                        <span class="skill-percent">Moderate</span>
+                    </div>
+                    <div class="skill-badge moderate">Moderate</div>
+                </div>
+
+                <!-- Skill Card: Flutter -->
+                <div class="skill-card glass-card reveal" data-tilt>
+                    <div class="skill-icon-wrap">
+                        <div class="skill-icon" style="--accent: #02569B;">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M14.314 0L2.3 12 6 15.7 21.684.013h-7.357L14.314 0zm.014 11.072L7.857 17.53l6.47 6.47H21.7l-6.46-6.468 6.46-6.46h-7.372z"/></svg>
+                        </div>
+                    </div>
+                    <h3 class="skill-name">Flutter</h3>
+                    <div class="skill-level">
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="65" style="--fill-color: #02569B;"></div>
+                        </div>
+                        <span class="skill-percent">Moderate</span>
+                    </div>
+                    <div class="skill-badge moderate">Moderate</div>
+                </div>
+
+                <!-- Skill Card: CSS -->
+                <div class="skill-card glass-card reveal" data-tilt>
+                    <div class="skill-icon-wrap">
+                        <div class="skill-icon" style="--accent: #264de4;">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M1.5 0h21l-1.91 21.56L11.99 24l-8.59-2.44L1.5 0zm17.09 4.47H5.41l.3 3.35h12.59l-.92 10.3-5.39 1.49-5.38-1.49-.37-4.14h3.3l.19 2.12 2.26.61 2.27-.61.24-2.63H5.71L5.1 4.47z"/></svg>
+                        </div>
+                    </div>
+                    <h3 class="skill-name">CSS</h3>
+                    <div class="skill-level">
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="85" style="--fill-color: #264de4;"></div>
+                        </div>
+                        <span class="skill-percent">Advanced</span>
+                    </div>
+                    <div class="skill-badge advanced">Advanced</div>
+                </div>
+
+                <!-- Skill Card: JavaScript -->
+                <div class="skill-card glass-card reveal" data-tilt>
+                    <div class="skill-icon-wrap">
+                        <div class="skill-icon" style="--accent: #f7df1e;">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.405-.6-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/></svg>
+                        </div>
+                    </div>
+                    <h3 class="skill-name">JavaScript</h3>
+                    <div class="skill-level">
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="75" style="--fill-color: #f7df1e;"></div>
+                        </div>
+                        <span class="skill-percent">Proficient</span>
+                    </div>
+                    <div class="skill-badge proficient">Proficient</div>
+                </div>
+
+                <!-- Skill Card: Dart -->
+                <div class="skill-card glass-card reveal" data-tilt>
+                    <div class="skill-icon-wrap">
+                        <div class="skill-icon" style="--accent: #0175C2;">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M4.105 4.105S9.158 1.58 11.684.316a3.079 3.079 0 0 1 1.481-.315c.766.047 1.677.788 1.677.788L24 9.948V14.4l-6.543 6.587-6.385-2.928-4.96 4.96L0 18.906V4.105zm7.196.105l-6.96 6.96v6.3l2.07 2.07 4.35-4.35-1.46-6.98 2-4z"/></svg>
+                        </div>
+                    </div>
+                    <h3 class="skill-name">Dart</h3>
+                    <div class="skill-level">
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="60" style="--fill-color: #0175C2;"></div>
+                        </div>
+                        <span class="skill-percent">Moderate</span>
+                    </div>
+                    <div class="skill-badge moderate">Moderate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section" id="experience">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">03 — Where I've Worked</span>
+                <h2 class="section-title">My <span class="gradient-text">Experience</span></h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-badge">Internship</div>
+                        <h3 class="timeline-title">Flutter App Developer</h3>
+                        <p class="timeline-company">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                            App Development Internship
+                        </p>
+                        <p class="timeline-desc">
+                            Built cross-platform mobile applications using Flutter & Dart. Developed real-world projects including UI/UX design, state management, API integration, and deployment workflows.
+                        </p>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Dart</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">REST APIs</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-badge">Internship</div>
+                        <h3 class="timeline-title">Full Stack Developer</h3>
+                        <p class="timeline-company">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                            Full Stack Development Internship
+                        </p>
+                        <p class="timeline-desc">
+                            Engineered end-to-end web applications using the MERN stack (MongoDB, Express.js, React, Node.js). Built responsive frontends, RESTful APIs, database schemas, and authentication systems.
+                        </p>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Express</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section section-dark" id="projects">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">04 — What I've Built</span>
+                <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card glass-card reveal">
+                    <div class="project-image">
+                        <div class="project-placeholder" style="--bg: linear-gradient(135deg, #667eea, #764ba2);">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-view">View Details</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span>Flutter</span>
+                            <span>Dart</span>
+                            <span>Firebase</span>
+                        </div>
+                        <h3 class="project-title">Mobile Commerce App</h3>
+                        <p class="project-desc">A feature-rich e-commerce mobile application built with Flutter, featuring product browsing, cart management, secure checkout flow, and real-time order tracking with Firebase backend.</p>
+                    </div>
+                </div>
+                <div class="project-card glass-card reveal">
+                    <div class="project-image">
+                        <div class="project-placeholder" style="--bg: linear-gradient(135deg, #f093fb, #f5576c);">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-view">View Details</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <h3 class="project-title">Task Management Dashboard</h3>
+                        <p class="project-desc">A full-stack MERN application with real-time task tracking, team collaboration, drag-and-drop boards, user authentication, and analytics dashboard with interactive charts.</p>
+                    </div>
+                </div>
+                <div class="project-card glass-card reveal">
+                    <div class="project-image">
+                        <div class="project-placeholder" style="--bg: linear-gradient(135deg, #4facfe, #00f2fe);">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-view">View Details</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Cryptography</span>
+                            <span>Security</span>
+                        </div>
+                        <h3 class="project-title">Cipher Suite Toolkit</h3>
+                        <p class="project-desc">A comprehensive encryption & decryption toolkit implementing classical and modern ciphers — Caesar, Vigenère, RSA, AES. Built as part of the NPTEL Cryptography coursework.</p>
+                    </div>
+                </div>
+                <div class="project-card glass-card reveal">
+                    <div class="project-image">
+                        <div class="project-placeholder" style="--bg: linear-gradient(135deg, #a18cd1, #fbc2eb);">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-view">View Details</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span>Flutter</span>
+                            <span>REST API</span>
+                            <span>UI/UX</span>
+                        </div>
+                        <h3 class="project-title">Weather Forecast App</h3>
+                        <p class="project-desc">A sleek weather app with beautiful animations, location-based forecasts, 7-day predictions, and dynamic UI themes that change based on weather conditions and time of day.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="section" id="certifications">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">05 — My Credentials</span>
+                <h2 class="section-title">Certifications & <span class="gradient-text">Achievements</span></h2>
+            </div>
+            <div class="certs-grid">
+                <div class="cert-card glass-card reveal">
+                    <div class="cert-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <div class="cert-content">
+                        <h3>Cybersecurity</h3>
+                        <p class="cert-issuer">NPTEL (IIT Certification)</p>
+                        <p class="cert-desc">Comprehensive course covering network security, threat analysis, intrusion detection, and cyber defense strategies. Secured decent marks with thorough understanding of security protocols.</p>
+                        <div class="cert-badge">
+                            <span class="badge-dot"></span> Certified
+                        </div>
+                    </div>
+                </div>
+                <div class="cert-card glass-card reveal">
+                    <div class="cert-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    </div>
+                    <div class="cert-content">
+                        <h3>Cryptography</h3>
+                        <p class="cert-issuer">NPTEL (IIT Certification)</p>
+                        <p class="cert-desc">In-depth study of encryption algorithms, public key infrastructure, digital signatures, hash functions, and cryptographic protocols. Applied knowledge in practical cipher implementations.</p>
+                        <div class="cert-badge">
+                            <span class="badge-dot"></span> Certified
+                        </div>
+                    </div>
+                </div>
+                <div class="cert-card glass-card reveal">
+                    <div class="cert-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                    </div>
+                    <div class="cert-content">
+                        <h3>Badminton Tournaments</h3>
+                        <p class="cert-issuer">Competitive Sports</p>
+                        <p class="cert-desc">Active tournament-level badminton player with participation in inter-college and district-level competitions. Demonstrates discipline, strategic thinking, and competitive spirit.</p>
+                        <div class="cert-badge sport">
+                            <span class="badge-dot"></span> Athlete
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="section section-dark" id="philosophy">
+        <div class="container">
+            <div class="philosophy-wrapper reveal">
+                <div class="philosophy-decoration">
+                    <div class="deco-circle deco-1"></div>
+                    <div class="deco-circle deco-2"></div>
+                    <div class="deco-circle deco-3"></div>
+                </div>
+                <div class="quote-marks">"</div>
+                <blockquote class="philosophy-quote">
+                    Life holds us back in crisis not to stop us — but to compress our energy like a spring. The recoil is where dreams accelerate.
+                </blockquote>
+                <div class="philosophy-author">
+                    <div class="author-line"></div>
+                    <span>Kevin Misiha Das</span>
+                </div>
+                <p class="philosophy-note">
+                    I believe every setback is a setup for a greater comeback. The challenges we face aren't roadblocks — they're launchpads. This philosophy drives everything I do, from debugging code at 3 AM to training for my next badminton match.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Origin Section (Map & Home Base) -->
+    <section class="section" id="origin">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">06 — My Roots</span>
+                <h2 class="section-title">Home <span class="gradient-text">Base</span></h2>
+            </div>
+            <div class="origin-grid">
+                <!-- Location Details & Stats Card -->
+                <div class="origin-info-card glass-card reveal">
+                    <div class="origin-image-wrap">
+                        <img src="images/trivandrum_aerial.png" alt="Trivandrum Coastline" class="origin-img">
+                        <div class="origin-image-overlay">
+                            <span class="coord-label">TRIVANDRUM // KERALA</span>
+                            <span class="coord-val">8° 31' 27" N, 76° 56' 12" E</span>
+                        </div>
+                    </div>
+                    <div class="origin-details">
+                        <h3 class="origin-title">Trivandrum (Thiruvananthapuram)</h3>
+                        <p class="origin-desc">
+                            The Evergreen City of India. The capital city of Kerala, bordered by the Arabian Sea on the west and the Western Ghats on the east. A beautiful blend of heritage, coastal beauty, and a rapidly expanding tech ecosystem.
+                        </p>
+                        
+                        <div class="origin-radar-panel">
+                            <div class="radar-item">
+                                <span class="radar-label">Local Time</span>
+                                <span class="radar-val" id="trivandrumClock">--:--:-- PM IST</span>
+                            </div>
+                            <div class="radar-item">
+                                <span class="radar-label">Tech Hub</span>
+                                <span class="radar-val">Technopark Kerala</span>
+                            </div>
+                            <div class="radar-item">
+                                <span class="radar-label">Climate</span>
+                                <span class="radar-val">Tropical Monsoon</span>
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-outline btn-full" id="toggleMapMode">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <span>Switch to Satellite View</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Interactive Map UI Card -->
+                <div class="origin-map-card glass-card reveal">
+                    <div class="map-view-wrapper" id="mapIframeContainer">
+                        <!-- Dark Filtered Interactive Google Maps Embed -->
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126284.81640108343!2d76.88301804245642!3d8.524139129598285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05b1b1b1b1b1b1%3A0x700000000000000!2sThiruvananthapuram%2C%20Kerala!5e0!3m2!1sen!2sin!4v1719220000000!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            class="dark-map-iframe">
+                        </iframe>
+                        <div class="map-coordinates-overlay">
+                            <span class="scanner-line"></span>
+                            <span class="marker-radar-dot"></span>
+                        </div>
+                    </div>
+                    <div class="map-view-wrapper hidden" id="aerialImageContainer">
+                        <img src="images/trivandrum_aerial.png" alt="Trivandrum Satellite View" class="satellite-view-img">
+                        <div class="satellite-grid-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interests Section -->
+    <section class="section" id="interests">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">07 — Beyond Code</span>
+                <h2 class="section-title">Interests & <span class="gradient-text">Passions</span></h2>
+            </div>
+            <div class="interests-grid">
+                <div class="interest-card reveal">
+                    <div class="interest-icon-wrap">
+                        <div class="interest-icon">🔬</div>
+                    </div>
+                    <h3>Science Explorer</h3>
+                    <p>Enthusiastic about exploring new frontiers of science and technology, always curious about how things work at a fundamental level.</p>
+                </div>
+                <div class="interest-card reveal">
+                    <div class="interest-icon-wrap">
+                        <div class="interest-icon">🏸</div>
+                    </div>
+                    <h3>Badminton</h3>
+                    <p>Competitive player who has participated in tournaments. The discipline and strategic thinking from sports translate directly into problem-solving.</p>
+                </div>
+                <div class="interest-card reveal">
+                    <div class="interest-icon-wrap">
+                        <div class="interest-icon">🤖</div>
+                    </div>
+                    <h3>Artificial Intelligence</h3>
+                    <p>Passionate about AI/ML and its potential to reshape industries. Currently pursuing specialized studies in AI as part of my B.Tech program.</p>
+                </div>
+                <div class="interest-card reveal">
+                    <div class="interest-icon-wrap">
+                        <div class="interest-icon">📚</div>
+                    </div>
+                    <h3>Deep Thinking</h3>
+                    <p>A philosophical thinker who finds meaning in life's challenges. I believe in turning adversity into fuel for extraordinary achievement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section section-dark" id="contact">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">08 — Say Hello</span>
+                <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <p class="contact-intro">
+                        I'm always open to new opportunities, collaborations, and conversations. Whether you have a project idea, a job opportunity, or just want to say hello — my inbox is always open!
+                    </p>
+                    <div class="contact-details">
+                        <a href="mailto:kevin@example.com" class="contact-item glass-card">
+                            <div class="contact-icon-wrap">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            </div>
+                            <div>
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value">kevin@example.com</span>
+                            </div>
+                        </a>
+                        <a href="#" class="contact-item glass-card">
+                            <div class="contact-icon-wrap">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                            </div>
+                            <div>
+                                <span class="contact-label">LinkedIn</span>
+                                <span class="contact-value">Kevin Misiha Das</span>
+                            </div>
+                        </a>
+                        <a href="#" class="contact-item glass-card">
+                            <div class="contact-icon-wrap">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                            </div>
+                            <div>
+                                <span class="contact-label">GitHub</span>
+                                <span class="contact-value">Kevin Misiha Das</span>
+                            </div>
+                        </a>
+                        <div class="contact-item glass-card">
+                            <div class="contact-icon-wrap">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </div>
+                            <div>
+                                <span class="contact-label">Location</span>
+                                <span class="contact-value">Trivandrum, Kerala, India</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form glass-card reveal" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Project Idea">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <span>Send Message</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="#hero" class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>KMD<span class="logo-bracket"> /&gt;</span>
+                </a>
+                <p class="footer-text">Designed & Built by <strong>Kevin Misiha Das</strong></p>
+                <p class="footer-copy">&copy; 2026 All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
